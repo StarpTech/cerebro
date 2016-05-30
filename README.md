@@ -16,7 +16,7 @@ npm run test
 ```
 
 ## What is my motivation?
-There are just a few frameworks for NodeJs which provide a good way to built microservices but they comes with limitations and risks.
+There are just a few frameworks for NodeJs which provide a good way to built a distributed system but they comes with limitations and risks.
 Risks in kind of:
 
 * Small opensource community
