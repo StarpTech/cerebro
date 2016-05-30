@@ -1,5 +1,5 @@
 # cerebro
-Proof of concept - gRPC in a microservice architecture
+Proof of concept - [gRPC](https://github.com/grpc/grpc) in a microservice architecture
 
 ## Install
 To install, simply use npm.
@@ -23,7 +23,7 @@ Risks in kind of:
 * Not proved in production
 * No or less documentation.
 
-that's the reason why I look around me to find a better solution.
+that's the reason why I look around me to find a more robust and standardized solution.
 
 
 ## Why I want to test this?
