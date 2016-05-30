@@ -33,7 +33,7 @@ So that it's not up to you. How to
    * to validate the correct response and request format.
    * to implement a driver in your favorite langauge because protos are language-neutral, platform-neutral. You can write services in any language.
    * to call them because gRPC follows the priciple of Services not Objects, Messages not References.
-   * easy streaming interface.
+   * to implement a streaming interface.
 
 
 Here's an example:
