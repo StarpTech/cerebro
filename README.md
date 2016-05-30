@@ -34,6 +34,8 @@ So that it's not up to you. How to
    * to implement a driver in your favorite langauge because protos are language-neutral, platform-neutral. You can write services in any language.
    * to call them because gRPC follows the priciple of Services not Objects, Messages not References.
    * to implement a streaming interface.
+   
+[gRPC Motivation and Design Principles.](http://www.grpc.io/posts/principles)
 
 
 Here's an example:
