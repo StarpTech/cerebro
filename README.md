@@ -44,3 +44,7 @@ Here's an example:
 node server.js
 node client.js
 ```
+
+#Author
+
+Dustin Deus <deusdustin@gmail.com>
