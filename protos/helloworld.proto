@@ -7,20 +7,18 @@ option objc_class_prefix = "HLW";
 
 package helloworld;
 
-// The greeting service definition.
+// The seneca service definition.
 service Seneca {
-  // Sends a greeting
+
   rpc act (Pattern) returns (reply) {}
   rpc actStream (Pattern) returns (stream reply) {}
 }
 
-// The request message containing the user's name.
 message Pattern {
   string service = 1;
   bytes data = 2;
 }
 
-// The response message containing the greetings
 message reply {
   bytes data = 1;
 }
