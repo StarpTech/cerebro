@@ -4,7 +4,7 @@ var grpc = require('grpc');
 var hello_proto = grpc.load(PROTO_PATH).helloworld;
 
 function main() {
-  var client = new hello_proto.Greeter('localhost:50051',
+  var client = new hello_proto.Seneca('localhost:50051',
                                        grpc.credentials.createInsecure());
   var user;
   if (process.argv.length >= 3) {
@@ -12,8 +12,8 @@ function main() {
   } else {
     user = 'world';
   }
-  client.sayHello({name: user}, function(err, response) {
-    console.log('Greeting:', response.message);
+  client.act({service: 'user', data: 'test' }, function(err, response) {
+    console.log('Greeting:', response.data.toString());
   });
 }
 

@@ -6,8 +6,8 @@ var hello_proto = grpc.load(PROTO_PATH).helloworld;
 /**
  * Implements the SayHello RPC method.
  */
-function sayHello(call, callback) {
-  callback(null, {message: 'Hello ' + call.request.name});
+function act(call, callback) {
+  callback(null, {data: new Buffer(call.request.service, "utf-8") });
 }
 
 /**
@@ -16,7 +16,7 @@ function sayHello(call, callback) {
  */
 function main() {
   var server = new grpc.Server();
-  server.addProtoService(hello_proto.Greeter.service, {sayHello: sayHello});
+  server.addProtoService(hello_proto.Seneca.service, {act: act});
   server.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
   server.start();
 }
