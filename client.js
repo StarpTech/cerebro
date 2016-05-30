@@ -12,9 +12,28 @@ function main() {
   } else {
     user = 'world';
   }
+  
+  /**
+   * Simple Call
+   */
   client.act({service: 'user', data: 'test' }, function(err, response) {
     console.log('Greeting:', response.data.toString());
   });
+  
+  /**
+   * Streaming
+   */
+  var call = client.actStream({service: 'user', data: 'test' });
+  call.on('data', function(response) {
+      console.log('data over stream ->' + response.data);
+  });
+  call.on('end', function() {
+    // The server has finished sending
+  });
+  call.on('status', function(status) {
+    // process status
+  });
+  
 }
 
 main();
